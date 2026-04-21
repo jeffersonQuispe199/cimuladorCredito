@@ -1,70 +1,131 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Fondo con degradado animado */
+    background: linear-gradient(-45deg, #1e3c72, #2a5298, #2c3e50, #4ca1af);
+    background-size: 400% 400%;
+    animation: movimientoFondo 15s ease infinite;
+}
+
+/* Animación del fondo */
+@keyframes movimientoFondo {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .container {
-    width: 400px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 420px;
+    padding: 30px;
+    /* Fondo semi-transparente para estilo empresarial moderno */
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
+h1 { 
+    text-align: center; 
+    color: #1e3c72; 
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-h2 {
-    margin-top: 20px;
-    font-size: 18px;
+h2 { 
+    margin-top: 25px; 
+    font-size: 16px; 
+    color: #2a5298;
+    border-left: 4px solid #3498db;
+    padding-left: 10px;
 }
 
-label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
+label { 
+    display: block; 
+    margin-top: 15px; 
+    font-weight: 600; 
+    color: #444;
+    font-size: 14px;
 }
 
 input {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    border-radius: 6px;
+    border: 1px solid #ddd;
     box-sizing: border-box;
+    transition: border 0.3s;
 }
 
-p {
-    margin-top: 10px;
+input:focus {
+    outline: none;
+    border: 1px solid #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
 }
 
-span {
-    font-weight: bold;
-    color: #2c3e50;
+p { 
+    margin-top: 12px; 
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+span { 
+    font-weight: bold; 
+    color: #1e3c72; 
+}
+
+hr { 
+    border: 0; 
+    border-top: 1px solid #eee; 
+    margin: 20px 0; 
 }
 
 .buttons {
-    margin-top: 20px;
+    margin-top: 25px;
     display: flex;
     justify-content: space-between;
 }
 
 button {
     width: 48%;
-    padding: 10px;
+    padding: 12px;
     border: none;
-    border-radius: 5px;
-    background-color: #3498db;
+    border-radius: 8px;
+    background-color: #1e3c72;
     color: white;
     font-weight: bold;
     cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
 }
 
-button:hover {
-    background-color: #2980b9;
+button:hover { 
+    background-color: #2a5298; 
+    transform: translateY(-2px);
+}
+
+#btnReiniciar {
+    background-color: #95a5a6;
+}
+
+#btnReiniciar:hover {
+    background-color: #7f8c8d;
+}
+.logo-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.logo {
+    max-width: 120px; /* Ajusta este valor según qué tan grande quieras el logo */
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
